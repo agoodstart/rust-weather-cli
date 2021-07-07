@@ -79,7 +79,7 @@ struct Sys {
 
 impl Forecast {
     async fn get(city: &String, country_code: &String) -> Result<Self, ExitFailure> {
-        let url = format!("http://api.openweathermap.org/data/2.5/weather?q={},{}&appid=909ae58bb627becbdc1dd79586b0d661", city, country_code);
+        let url = format!("http://api.openweathermap.org/data/2.5/weather?q={},{}&appid=ENTER APP ID", city, country_code);
         let url = Url::parse(&*url)?;
 
         let resp = reqwest::get(url)
